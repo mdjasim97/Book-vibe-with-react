@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const NotFoundPage = () => {
 
@@ -9,8 +9,11 @@ const NotFoundPage = () => {
     }
     return (
         <div>
-            <h1 className='text-5xl'>Opps...</h1>
-            <button onClick={handleNavigate} className='btn'>Back</button>
+            <div className='flex flex-col min-h-screen items-center justify-center space-y-8'>
+                <h1 className='text-9xl'>Opps...</h1>
+                <p className='text-3xl'>404 Not Found Page</p>
+                <button onClick={handleNavigate} className='btn'>Previous Page</button>
+            </div>
         </div>
     );
 };
