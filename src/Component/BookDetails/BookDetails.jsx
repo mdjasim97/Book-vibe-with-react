@@ -1,18 +1,26 @@
 import React from 'react';
 import { NavLink, useLoaderData, useParams } from 'react-router-dom';
-import { saveReadBooks } from '../../Utility/ReadBook';
+import { getReadsBookStorage, saveReadBooks } from '../../Utility/ReadListStore';
+import {saveWishListBook} from '../../Utility/WishListStore'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookDetails = () => {
 
     const booksData = useLoaderData()
     const { id } = useParams()
+    const idInt = parseInt(id)
 
-    const book = booksData.find(books => books.id === id);
+    const book = booksData.find(books => books.id === idInt);
     // console.log(book)
 
 
-    const handleReadBook = () => {
-        saveReadBooks(id)
+    const handleReadBookOrToast = () => {
+        saveReadBooks(idInt)
+    }
+
+    const handleWishlist = () => {
+        saveWishListBook(idInt)
     }
 
 
@@ -21,17 +29,17 @@ const BookDetails = () => {
         <div>
             <div className="hero min-h-screen bg-white">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div className='bg-base-200 flex-1 p-10 rounded-3xl'>
-                        <img src={book["cover_image"]} className="min-h-[500px] max-w-sm rounded-lg shadow-2xl" />
+                    <div className='bg-base-200 flex-1 lg:p-10 rounded-3xl'>
+                        <img src={book["cover_image"]} className="lg:min-h-[500px] max-w-sm rounded-lg shadow-2xl" />
                     </div>
                     <div className='flex-1'>
-                        <h1 className="text-5xl font-bold">{book["title"]}</h1>
-                        <p className="py-6">{book["author"]}</p>
+                        <h1 className="text-2xl lg:text-5xl font-bold">{book["title"]}</h1>
+                        <p className="py-2 lg:py-6">{book["author"]}</p>
                         <hr />
                         <p className='my-2'>{book["genre"]}</p>
                         <hr />
                         <p className='my-2'><span className='font-bold'>reviews : </span>{book["reviews"]}</p>
-                        <p className='my-5'><span className='font-bold mr-5'>tag : </span>{book["tag"].map(tag => <NavLink className="mr-10 text-[#23BE0A]">{tag}</NavLink>)}</p>
+                        <p className='my-5'><span className='font-bold mr-5'>tag : </span>{book["tag"].map((tag, indx) => <NavLink key={indx} className="mr-10 text-[#23BE0A]">{tag}</NavLink>)}</p>
                         <hr />
                         <div className=''>
                             <div className='my-2 grid grid-cols-2'>
@@ -54,8 +62,9 @@ const BookDetails = () => {
                         <hr />
 
                         <div className='my-5'>
-                            <button onClick={()=> handleReadBook()} className="btn btn-outline mr-5">Read</button>
-                            <button className="btn bg-[#50B1C9]">Wishlist</button>
+                            <ToastContainer />
+                            <button onClick={() => handleReadBookOrToast()} className="btn btn-outline mr-5">Read</button>
+                            <button onClick={() => handleWishlist()} className="btn bg-[#50B1C9]">Wishlist</button>
                         </div>
                     </div>
                 </div>

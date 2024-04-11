@@ -1,9 +1,9 @@
 [{
-        "id": "1",
+        "id": 1,
         "title": "To Kill a Mockingbird",
         "author": "Harper Lee",
         "genre": "Fiction",
-        "category": "Classic",
+        "category": ["Classic", "Identity"],
         "published_year": 1960,
         "publisher": "J. B. Lippincott & Co.",
         "pages": 336,
@@ -13,11 +13,11 @@
         "reviews": "A timeless classic, tackling themes of racial injustice and morality with grace. Harper Lee's storytelling is poignant, creating unforgettable characters and thought-provoking situations. A must-read for its enduring impact on literature and societal reflection."
     },
     {
-        "id": "2",
+        "id": 2,
         "title": "1984",
         "author": "George Orwell",
         "genre": "Dystopian Fiction",
-        "category": "Science Fiction",
+        "category": ["Science Fiction", "Identity"],
         "published_year": 1949,
         "publisher": "Secker & Warburg",
         "pages": 328,
@@ -27,11 +27,11 @@
         "reviews": "An impactful read that stays with you long after finishing. Harper Lee's masterful narrative skillfully navigates themes of justice and prejudice, leaving a profound impression. Highly recommended for its lasting relevance and emotional resonance."
     },
     {
-        "id": "3",
+        "id": 3,
         "title": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
         "genre": "Fiction",
-        "category": "Classic",
+        "category": ["Classic", "Identity"],
         "published_year": 1925,
         "publisher": "Charles Scribner's Sons",
         "pages": 180,
@@ -41,11 +41,11 @@
         "reviews": "While the themes are powerful, I found some parts a bit slow. Still worth reading. Harper Lee's exploration of racial injustice and moral complexities offers valuable insights, despite occasional pacing issues. A compelling and thought-provoking novel that merits attention."
     },
     {
-        "id": "4",
+        "id": 4,
         "title": "Pride and Prejudice",
         "author": "Jane Austen",
         "genre": "Romance",
-        "category": "Classic",
+        "category": ["Classic", "Identity"],
         "published_year": 1813,
         "publisher": "T. Egerton, Whitehall",
         "pages": 432,
@@ -55,11 +55,11 @@
         "reviews": "Absolutely brilliant. A must-read for everyone. Harper Lee's compelling portrayal of moral integrity amidst societal prejudice captivates from start to finish. The characters are unforgettable, and the narrative's depth leaves a lasting impact. An essential addition to any reading list."
     },
     {
-        "id": "5",
+        "id": 5,
         "title": "Harry Potter and the Philosopher's Stone",
         "author": "J.K. Rowling",
         "genre": "Fantasy",
-        "category": "Young Adult",
+        "category": ["Young Adult", "Identity"],
         "published_year": 1997,
         "publisher": "Bloomsbury",
         "pages": 352,
@@ -69,11 +69,11 @@
         "reviews": "To Kill a Mockingbird is a masterpiece. It deserves all the praise it gets. Harper Lee's timeless novel resonates with its powerful themes of empathy and justice. Its profound impact on readers persists, making it a seminal work in American literature."
     },
     {
-        "id": "6",
+        "id": 6,
         "title": "The Catcher in the Rye",
         "author": "J.D. Salinger",
         "genre": "Fiction",
-        "category": "Classic",
+        "category": ["Classic", "Identity"],
         "published_year": 1951,
         "publisher": "Little, Brown and Company",
         "pages": 224,
@@ -83,11 +83,11 @@
         "reviews": "I appreciated the depth of the characters and the moral dilemmas they faced. Harper Lee's nuanced exploration of societal injustices and personal integrity offers rich material for reflection. A thought-provoking narrative that prompts readers to confront complex moral questions."
     },
     {
-        "id": "7",
+        "id": 7,
         "title": "The Hobbit",
         "author": "J.R.R. Tolkien",
         "genre": "Fantasy",
-        "category": "Classic",
+        "category": ["Classic", "Identity"],
         "published_year": 1937,
         "publisher": "Allen & Unwin",
         "pages": 304,
@@ -98,11 +98,11 @@
         "reviews": "This book opened my eyes to many social issues. It's a powerful and important read. Harper Lee's poignant portrayal of racial injustice and moral courage challenges readers to confront uncomfortable truths. An essential read for its profound commentary on societal norms and values."
     },
     {
-        "id": "8",
+        "id": 8,
         "title": "The Lord of the Rings",
         "author": "J.R.R. Tolkien",
         "genre": "Fantasy",
-        "category": "Classic",
+        "category": ["Classic", "Identity"],
         "published_year": 1954,
         "publisher": "Allen & Unwin",
         "pages": 1178,
@@ -112,11 +112,11 @@
         "reviews": "A classic that remains relevant today. The storytelling is exceptional. Harper Lee's timeless narrative effortlessly blends social commentary with compelling storytelling. Its exploration of racial prejudice and moral integrity continues to resonate, ensuring its enduring relevance in contemporary society."
     },
     {
-        "id": "9",
+        "id": 9,
         "title": "Moby-Dick",
         "author": "Herman Melville",
         "genre": "Adventure",
-        "category": "Classic",
+        "category": ["Classic", "Identity"],
         "published_year": 1851,
         "publisher": "Richard Bentley",
         "pages": 720,
@@ -126,11 +126,11 @@
         "reviews": "A beautifully written novel that captures the essence of humanity. Highly recommended. Harper Lee's evocative prose and memorable characters offer a poignant portrayal of the human experience. 'To Kill a Mockingbird' stands as a testament to the enduring power of empathy and compassion."
     },
     {
-        "id": "10",
+        "id": 10,
         "title": "Frankenstein",
         "author": "Mary Shelley",
         "genre": "Gothic Fiction",
-        "category": "Classic",
+        "category": ["Classic", "Identity"],
         "published_year": 1818,
         "publisher": "Lackington, Hughes, Harding, Mavor, & Jones",
         "pages": 288,

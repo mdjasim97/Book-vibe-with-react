@@ -5,7 +5,6 @@ const Books = () => {
 
     const [books, setBooks] = useState([])
 
-
     useEffect(() => {
         fetch("/books.json")
             .then(res => res.json())
@@ -19,7 +18,7 @@ const Books = () => {
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
                 {
-                    books.map(book => <Book key={books.id} book={book} ></Book>)
+                    books.map((book, indx) => <Book key={indx} book={book} ></Book>)
                 }
             </div>
         </div>

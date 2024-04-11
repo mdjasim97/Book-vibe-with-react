@@ -6,11 +6,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import ErrorPage from './Component/ErrorPage/ErrorPage.jsx';
+import NotFound from './Pages/NotFoundPage/NotFoundPage.jsx';
 import Root from './Component/Root/Root.jsx';
-import HomePage from './Component/HomePage/HomePage.jsx';
+import HomePage from './Pages/HomePage/HomePage.jsx';
 import BookDetails from './Component/BookDetails/BookDetails.jsx';
-import Reads from './Component/Reads/Reads.jsx';
+import ReadsPageDetails from './Pages/ReadPage/ReadPageDetails.jsx';
+import ListPages from './Pages/ListPage/ListPages.jsx';
 
 
 
@@ -18,22 +19,35 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement : <ErrorPage></ErrorPage>,
-    children : [
+    errorElement: <NotFound></NotFound>,
+    children: [
       {
-        path : "/",
-        element : <HomePage></HomePage>
+        path: "/",
+        element: <HomePage></HomePage>
+      },
+
+      {
+        path: "/listpages",
+        element: <ListPages></ListPages>,
+        loader: () => fetch("/books.json")
+      },
+      
+      {
+        path: "listpages/bookDetails/:id",
+        element: <BookDetails></BookDetails>,
+        loader: () => fetch("/books.json")
       },
       {
-        path : "/bookDetails/:id",
-        element : <BookDetails></BookDetails>,
-        loader : ()=> fetch("/books.json")
+        path: "/bookDetails/:id",
+        element: <BookDetails></BookDetails>,
+        loader: () => fetch("/books.json")
       },
       {
-        path : "/readsBook",
-        element : <Reads></Reads>,
-        loader : ()=> fetch("/books.json")
-      },
+        path: "/readsBook",
+        element: <ReadsPageDetails></ReadsPageDetails>,
+        loader: () => fetch("/books.json")
+      }
+    
     ]
   },
 ])

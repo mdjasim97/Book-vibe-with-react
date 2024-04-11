@@ -1,12 +1,13 @@
 import React from 'react';
-import Bannar from '../Bannner/Bannar';
-import Books from '../Books/Books'
+import Bannar from '../../Component/Bannner/Bannar';
+import Books from '../../Component/Books/Books'
 
 const HomePage = () => {
     return (
         <div>
             <Bannar></Bannar>
             <Books></Books>
+            
         </div>
     );
 };

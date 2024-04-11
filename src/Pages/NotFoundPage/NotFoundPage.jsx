@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ErrorPage = () => {
+const NotFoundPage = () => {
 
     const navigate = useNavigate()
     const handleNavigate = () => {
@@ -15,4 +15,4 @@ const ErrorPage = () => {
     );
 };
 
-export default ErrorPage;
+export default NotFoundPage;
