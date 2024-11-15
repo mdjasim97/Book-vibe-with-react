@@ -1,4 +1,4 @@
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const getReadsBookStorage = () => {
@@ -11,14 +11,14 @@ const getReadsBookStorage = () => {
 
 const saveReadBooks = (id) => {
     const readBookStore = getReadsBookStorage()
-    const exits = readBookStore.find(booksId => booksId === id)
+    const isExits = readBookStore.find(bookId => bookId === id)
 
-    if (!exits) {
+    if (!isExits) {
         readBookStore.push(id)
         localStorage.setItem("reads-book", JSON.stringify(readBookStore))
-        toast("Books Added to ReadList")
+        toast.success("Books Added to ReadList")
     } else {
-        return toast("You have already Read this Books")
+        return toast.error("You have already Read this Books")
     }
 }
 

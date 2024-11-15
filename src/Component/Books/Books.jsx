@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import Book from '../Book/Book';
+import { useEffect, useState } from 'react';
+import Book from '../BookCard/BookCard';
 
 const Books = () => {
 
@@ -13,8 +13,8 @@ const Books = () => {
 
 
     return (
-        <div className=''>
-            <h1 className='text-5xl text-center font-bold my-10'>Books</h1>
+        <div className='mt-20'>
+            <h1 className='text-5xl font-Playfair text-center font-bold my-10'>Books</h1>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-10'>
                 {

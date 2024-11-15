@@ -1,5 +1,5 @@
 import { getReadsBookStorage } from "./ReadListStore"
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -12,17 +12,17 @@ const getWishListBookStorage = () => {
 }
 
 
-const saveWishListBook = (idInt) => {
+const saveWishListBook = (Id) => {
     const WishList = getWishListBookStorage()
-    const isExitWish = WishList.find(storeid => storeid === idInt);
+    const isExitWish = WishList.find(storeId => storeId === Id);
     const getReadList = getReadsBookStorage()
-    const isRead = getReadList.find(readId => readId === idInt)
+    const isRead = getReadList.find(readId => readId === Id)
     if (!isExitWish && !isRead) {
-        WishList.push(idInt)
+        WishList.push(Id)
         localStorage.setItem("wishlist", JSON.stringify(WishList))
-        toast("Book Added to wishlist")
+        toast.success("Book Added to wishlist")
     } else {
-        toast("You have already Read this Books")
+        toast.error("You have already Read this Books")
     }
 }
 
